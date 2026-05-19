@@ -16,3 +16,9 @@ node_modules/
 
 # OS
 .DS_Store
+
+# Vector database
+server/data/chroma_db/
+
+# Optional
+*.sqlite3
