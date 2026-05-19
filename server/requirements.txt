@@ -1,0 +1,9 @@
+flask
+flask-cors
+llama-index
+llama-index-vector-stores-chroma
+llama-index-llms-ollama
+llama-index-embeddings-huggingface
+chromadb
+pypdf
+sentence-transformers
