@@ -9,7 +9,7 @@ export default function Home() {
       id: "welcome",
       role: "assistant",
       content:
-        "Hello! I'm AlgoAsk. Ask me anything about algorithms — time complexity, data structures, searching techniques, and more. I'll answer strictly from the uploaded document knowledge base.",
+        "Hello! I'm AlgoAsk. How can I help you?",
     },
   ]);
   const [input, setInput] = useState("");
@@ -30,7 +30,7 @@ export default function Home() {
     setIsLoading(true);
 
     try {
-      const res = await fetch("http://localhost:8000/api/chat", {
+      const res = await fetch("http://localhost:8080/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userMessage }),
@@ -63,7 +63,7 @@ export default function Home() {
   return (
     <main className="flex h-screen flex-col bg-background mx-8 lg:mx-48 md:mx-20 pb-8 pt-4">
       <header className="px-6 py-4">
-        <h1 className="text-xl font-semibold tracking-tight"> &#9786; AlgoAsk</h1>
+        <h1 className="text-xl font-semibold tracking-tight text-teal-300"> &#9786; AlgoAsk</h1>
         <p className="text-sm text-muted-foreground">
           RAG based Algorithm assistant
         </p>
